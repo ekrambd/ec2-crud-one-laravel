@@ -1,1 +1,1 @@
-Welcome page
+Welcome Laravel API

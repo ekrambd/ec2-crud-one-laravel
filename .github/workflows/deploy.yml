@@ -3,7 +3,7 @@ name: Deploy Laravel to EC2
 on:
   push:
     branches:
-      - master  # Change this to your deployment branch if needed
+      - master
 
 jobs:
   deploy:
@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup SSH Agent and Key
-        uses: webfactory/ssh-agent@v0.8.1
+        uses: webfactory/ssh-agent@v0.5.4  # ✅ use a valid version
         with:
           ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
 
